@@ -19,6 +19,13 @@
   <img alt="license" src="https://img.shields.io/badge/license-MIT-C79A3C?style=flat-square&labelColor=2B2118">
 </p>
 
+
+<p align="center">
+  <a href="https://x.com/noisyb0y1/status/2092180376084963410">
+    <img alt="watch the floor run" src="https://img.shields.io/badge/▶%20watch%20the%20floor%20run-on%20X-2B2118?style=for-the-badge&labelColor=C79A3C">
+  </a>
+</p>
+
 <p align="center">
   <sub><b>every ticket walks the floor: desk → risk gate → execution → print.</b><br>
   Each desk drawn above is a seat this repository actually runs. The working version is a terminal
