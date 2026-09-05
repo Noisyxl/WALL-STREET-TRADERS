@@ -14,7 +14,7 @@ import { read as readReceipts, verify } from "./ledger/receipts.js";
 import { ROSTER, modelFor } from "./agents/roster.js";
 import { providerFor } from "./agents/provider.js";
 import { serveFloor } from "./floorview/server.js";
-import { setLogLevel } from "./util/log.js";
+import { setLogLevel, logLevel } from "./util/log.js";
 import { banner } from "./util/banner.js";
 import { badge, brass, bps, clock, lpad, money, muted, pad, pct, px, shares } from "./util/fmt.js";
 import type { Ticket } from "./types.js";
@@ -59,7 +59,7 @@ program
   .option("--probe", "call every distinct model once and report the round trip")
   .action(async (opts: { probe?: boolean }) => {
     const cfg = loadConfig();
-    process.stdout.write(banner() + "\n");
+    if (logLevel() !== "quiet") process.stdout.write(banner() + "\n");
 
     const rows: [string, string][] = [
       ["mode", `${cfg.mode}  ${muted("(there is no live mode; see docs/SAFETY.md)")}`],
@@ -193,7 +193,7 @@ program
     if (opts.minutes) cfg.sessionMin = opts.minutes;
     if (opts.seed !== undefined) cfg.tape.seed = opts.seed;
 
-    process.stdout.write(banner() + "\n");
+    if (logLevel() !== "quiet") process.stdout.write(banner() + "\n");
     const feed = makeFeed(cfg, { seed: cfg.tape.seed, minutes: cfg.sessionMin });
     const floor = new Floor({ cfg, feed, signalEvery: opts.signalEvery });
 

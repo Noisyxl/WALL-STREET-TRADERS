@@ -15,6 +15,8 @@ let level: Level = "normal";
 export const setLogLevel = (l: Level): void => {
   level = l;
 };
+/** Read by the CLI so `--quiet` also suppresses the banner, not just the lines. */
+export const logLevel = (): Level => level;
 
 const stamp = (): string => new Date().toISOString().slice(11, 19);
 
