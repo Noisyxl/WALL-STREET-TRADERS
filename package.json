@@ -1,0 +1,58 @@
+{
+  "name": "outcry",
+  "version": "0.1.0",
+  "description": "A trading floor you run on your own machine: twelve LLM seats, four desks in parallel, one risk gate every ticket must clear, orders worked level by level through a book. Paper by default, local, open, receipts for everything.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "outcry": "./bin/outcry.js"
+  },
+  "main": "./dist/cli.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "src",
+    "prompts",
+    "README.md",
+    "LICENSE",
+    ".env.example"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "start": "tsx src/cli.ts",
+    "doctor": "tsx src/cli.ts doctor",
+    "open": "tsx src/cli.ts open",
+    "floor": "tsx src/cli.ts floor",
+    "tape": "tsx src/cli.ts tape",
+    "build": "tsc -p tsconfig.json && node scripts/copy-static.js",
+    "test": "node --import tsx --test test/*.test.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "commander": "^12.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  },
+  "keywords": [
+    "trading-floor",
+    "multi-agent",
+    "llm-agents",
+    "agent-orchestration",
+    "paper-trading",
+    "risk-management",
+    "limit-order-book",
+    "grok",
+    "claude",
+    "backtesting"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phosphenq/outcry"
+  }
+}

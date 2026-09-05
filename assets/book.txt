@@ -1,0 +1,28 @@
+[1G[0K
+  [38;2;199;154;60mMU[0m  [38;2;122;106;86mminute 60 · spread 1.6 bps · imbalance 0.000[0m
+
+  126.88       22  ▇▇
+  126.87       29  ▇▇▇
+  126.86       55  ▇▇▇▇▇
+  126.85       56  ▇▇▇▇▇
+  126.84      127  ▇▇▇▇▇▇▇▇▇▇▇▇
+  ──────────────────────────────────  1.6 bps
+  126.82      127  ▇▇▇▇▇▇▇▇▇▇▇▇
+  126.81       56  ▇▇▇▇▇
+  126.80       55  ▇▇▇▇▇
+  126.79       29  ▇▇▇
+  126.78       22  ▇▇
+
+  [38;2;199;154;60mbuy 1,200[0m
+  [38;2;122;106;86mwork    [0m 612 filled @ 126.8496  +0.8 bps[38;2;122;106;86m  (588 shares left after 5 levels at 8% participation)[0m
+  [38;2;122;106;86msweep   [0m 310 filled @ 126.8549  +1.2 bps
+  [38;2;122;106;86msaved   [0m 0.4 bps by working it
+  [38;2;122;106;86massumes a lifted level gives back 60% before the next child order — EXEC_REPLENISH, docs/EXECUTION.md[0m
+
+  [38;2;122;106;86mthe ladder, one row per level, with the child orders it took:[0m
+  [38;2;122;106;86mlevel 0[0m  126.84 ×     314  [38;2;122;106;86m34 child orders[0m
+  [38;2;122;106;86mlevel 1[0m  126.85 ×     111  [38;2;122;106;86m29 child orders[0m
+  [38;2;122;106;86mlevel 2[0m  126.86 ×     108  [38;2;122;106;86m28 child orders[0m
+  [38;2;122;106;86mlevel 3[0m  126.87 ×      57  [38;2;122;106;86m29 child orders[0m
+  [38;2;122;106;86mlevel 4[0m  126.88 ×      22  [38;2;122;106;86m22 child orders[0m
+[1G[0K\[1G[0K

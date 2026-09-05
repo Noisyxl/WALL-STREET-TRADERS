@@ -1,0 +1,52 @@
+[1G[0K
+  [38;2;199;154;60mtwelve seats, one human[0m
+
+  [38;2;199;154;60mchief    [0m [38;2;122;106;86mchief of staff      [0m [38;2;122;106;86msignal    [0m grok-4.1
+            sets the session posture at the bell and re-reads it every 30 minutes
+            [38;2;122;106;86mcannot: write a ticket or overrule the gate[0m
+
+  [38;2;199;154;60mtape     [0m [38;2;122;106;86mthe tape            [0m [38;2;122;106;86mtick      [0m grok-4.1-fast
+            reads every tick, ranks what changed, hands the desks a short list
+            [38;2;122;106;86mcannot: have an opinion about direction[0m
+
+  [38;2;199;154;60mquant    [0m [38;2;122;106;86mquant desk          [0m [38;2;122;106;86msignal    [0m claude-sonnet-4-5
+            mean reversion and dispersion inside the universe
+            [38;2;122;106;86mcannot: size its own ticket[0m
+
+  [38;2;199;154;60mmacro    [0m [38;2;122;106;86mmacro desk          [0m [38;2;122;106;86msignal    [0m claude-sonnet-4-5
+            rates, dollar and volatility against the equity board
+            [38;2;122;106;86mcannot: size its own ticket[0m
+
+  [38;2;199;154;60mcredit   [0m [38;2;122;106;86mcredit desk         [0m [38;2;122;106;86msignal    [0m claude-sonnet-4-5
+            balance-sheet and funding stress read through the equity tape
+            [38;2;122;106;86mcannot: size its own ticket[0m
+
+  [38;2;199;154;60mdigital  [0m [38;2;122;106;86mdigital desk        [0m [38;2;122;106;86msignal    [0m claude-sonnet-4-5
+            flow, positioning and momentum breaks
+            [38;2;122;106;86mcannot: size its own ticket[0m
+
+  [38;2;199;154;60mrisk     [0m [38;2;122;106;86mthe gate            [0m [38;2;122;106;86mticket    [0m claude-opus-4-5
+            reviews every ticket the hard limits let through
+            [38;2;122;106;86mcannot: raise a limit, ever — see src/risk/gate.ts[0m
+
+  [38;2;199;154;60mpm       [0m [38;2;122;106;86mportfolio manager   [0m [38;2;122;106;86mticket    [0m grok-4.1
+            turns a cleared notional into a size against the book and the day
+            [38;2;122;106;86mcannot: clear a ticket the gate refused[0m
+
+  [38;2;199;154;60mexec     [0m [38;2;122;106;86mexecution           [0m [38;2;122;106;86mticket    [0m grok-4.1
+            picks the style and the limit, then works the order level by level
+            [38;2;122;106;86mcannot: change the side, the name or the size[0m
+
+  [38;2;199;154;60mclerk    [0m [38;2;122;106;86mthe clerk           [0m [38;2;122;106;86mticket    [0m —
+            reconciles fills against positions after every execution
+            [38;2;122;106;86mcannot: use a model at all — it is arithmetic and it stays arithmetic[0m
+
+  [38;2;199;154;60mcomms    [0m [38;2;122;106;86mcomms               [0m [38;2;122;106;86mclose     [0m grok-4.1
+            writes the close: what was done, what it cost, what is still open
+            [38;2;122;106;86mcannot: see anything that is not already in the receipts[0m
+
+  [38;2;199;154;60mscribe   [0m [38;2;122;106;86mthe scribe          [0m [38;2;122;106;86movernight [0m claude-haiku-4-5
+            grades yesterday's theses against what the tape actually did
+            [38;2;122;106;86mcannot: change a position or write a ticket[0m
+
+[1G[0K\[1G[0K

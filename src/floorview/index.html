@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>outcry · the floor</title>
+<style>
+  /* Palette is docs/design-tokens.json. One accent, spent on decisions only. */
+  :root {
+    --paper:  #EDE3CC;
+    --panel:  #F5EDD8;
+    --sunk:   #E2D5B8;
+    --wood:   #8A6A44;
+    --line:   #C2AF8E;
+    --ink:    #2B2118;
+    --ink-2:  #4A3B2C;
+    --muted:  #7A6A56;
+    --brass:  #C79A3C;
+    --loss:   #B4453C;
+    --gain:   #3F7A4E;
+    --mono: ui-monospace, "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--paper); color: var(--ink); }
+  body {
+    font: 12px/1.5 var(--mono);
+    padding: 14px;
+    /* the floor's boards, drawn rather than imported */
+    background-image:
+      repeating-linear-gradient(0deg, transparent 0 3px, rgba(43,33,24,.014) 3px 4px);
+  }
+  a { color: var(--ink); }
+
+  header {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 18px;
+    border: 1px solid var(--line); background: var(--panel);
+    padding: 10px 14px; margin-bottom: 12px;
+  }
+  .wordmark { font-size: 18px; letter-spacing: 3px; font-weight: 500; }
+  .kv { color: var(--muted); }
+  .kv b { color: var(--ink); font-weight: 500; }
+  .pulse {
+    margin-left: auto; display: inline-flex; align-items: center; gap: 7px;
+    color: var(--muted);
+  }
+  .dot { width: 8px; height: 8px; background: var(--brass); display: inline-block; }
+  .dot.stale { background: var(--line); }
+
+  .grid { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 1100px) { .grid { grid-template-columns: 1.35fr 1fr; } }
+  @media (min-width: 1500px) { .grid { grid-template-columns: 1.3fr .95fr .85fr; } }
+
+  section {
+    border: 1px solid var(--line); background: var(--panel);
+    min-width: 0;
+  }
+  h2 {
+    margin: 0; padding: 7px 12px;
+    font-size: 11px; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); border-bottom: 1px solid var(--line); background: var(--sunk);
+    display: flex; justify-content: space-between; gap: 10px;
+  }
+  h2 em { font-style: normal; color: var(--ink); letter-spacing: 0; text-transform: none; }
+  .body { padding: 10px 12px; overflow-x: auto; }
+
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+  th {
+    text-align: right; font-weight: 400; color: var(--muted); padding: 3px 6px;
+    border-bottom: 1px solid var(--line); white-space: nowrap;
+  }
+  th:first-child, td:first-child { text-align: left; }
+  td { text-align: right; padding: 3px 6px; white-space: nowrap; }
+  tbody tr:hover { background: var(--sunk); }
+  .neg { color: var(--loss); }
+  .sym { font-weight: 500; letter-spacing: .5px; }
+
+  .tag {
+    display: inline-block; padding: 0 6px; border: 1px solid var(--line);
+    background: var(--sunk); color: var(--ink-2); font-size: 11px;
+  }
+  .tag.fire  { background: var(--brass); border-color: var(--brass); color: #241B12; }
+  .tag.stop  { background: var(--loss);  border-color: var(--loss);  color: var(--paper); }
+
+  /* the twelve seats */
+  .seats { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+  .seat {
+    border: 1px solid var(--line); background: var(--sunk); padding: 6px 7px;
+    display: flex; flex-direction: column; gap: 2px; min-height: 62px;
+  }
+  .seat .who { font-weight: 500; letter-spacing: 1px; }
+  .seat .what, .seat .model { color: var(--muted); font-size: 11px; line-height: 1.35; }
+  .seat.active { border-color: var(--brass); background: var(--panel); }
+  .seat .chair {
+    width: 22px; height: 5px; background: var(--wood); margin-top: auto; opacity: .55;
+  }
+  .seat.active .chair { background: var(--brass); opacity: 1; }
+
+  ul.feed { list-style: none; margin: 0; padding: 0; }
+  ul.feed li {
+    padding: 6px 0; border-bottom: 1px dotted var(--line);
+  }
+  ul.feed li:last-child { border-bottom: 0; }
+  .why { color: var(--muted); }
+  .thesis { color: var(--ink-2); }
+
+  .ladder { font-variant-numeric: tabular-nums; }
+  .ladder .lvl { display: flex; gap: 8px; align-items: center; }
+  .ladder .fill { height: 8px; background: var(--line); }
+  .ladder .ask .fill { background: #D9AFA9; }
+  .ladder .bid .fill { background: #A9C4AE; }
+  .ladder .touch { border-top: 1px solid var(--line); margin: 4px 0; }
+
+  footer { color: var(--muted); padding: 10px 2px; }
+  code { background: var(--sunk); padding: 0 4px; border: 1px solid var(--line); }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="wordmark">OUTCRY</span>
+  <span class="kv">session <b id="session">—</b></span>
+  <span class="kv">clock <b id="clock">09:30</b></span>
+  <span class="kv">equity <b id="equity">—</b></span>
+  <span class="kv">session P&amp;L <b id="pnl">—</b></span>
+  <span class="kv">VaR&nbsp;95 <b id="var">—</b></span>
+  <span class="pulse"><span class="dot" id="dot"></span><span id="pulse">waiting for the bell</span></span>
+</header>
+
+<section style="margin-bottom:12px">
+  <h2>posture <em id="feedname"></em></h2>
+  <div class="body" id="posture">—</div>
+</section>
+
+<div class="grid">
+
+  <div style="display:grid;gap:12px;min-width:0;align-content:start">
+    <section>
+      <h2>the big board <em id="breadth"></em></h2>
+      <div class="body">
+        <table>
+          <thead><tr><th>name</th><th>last</th><th>chg</th><th>bid</th><th>ask</th><th>spr bps</th><th>vol</th></tr></thead>
+          <tbody id="board"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>tickets <em id="ticketcount"></em></h2>
+      <div class="body"><ul class="feed" id="tickets"></ul></div>
+    </section>
+  </div>
+
+  <div style="display:grid;gap:12px;min-width:0;align-content:start">
+    <section>
+      <h2>the floor <em>twelve seats</em></h2>
+      <div class="body"><div class="seats" id="seats"></div></div>
+    </section>
+
+    <section>
+      <h2>the gate <em id="queue"></em></h2>
+      <div class="body"><ul class="feed" id="verdicts"></ul></div>
+    </section>
+  </div>
+
+  <div style="display:grid;gap:12px;min-width:0;align-content:start">
+    <section>
+      <h2>positions <em id="exposure"></em></h2>
+      <div class="body">
+        <table>
+          <thead><tr><th>name</th><th>size</th><th>avg</th><th>last</th><th>unreal</th><th>%</th></tr></thead>
+          <tbody id="positions"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>fills <em>level by level</em></h2>
+      <div class="body"><ul class="feed" id="fills"></ul></div>
+    </section>
+  </div>
+
+</div>
+
+<footer>
+  read-only · loopback only · no route on this page can place an order ·
+  every number here is written to <code id="receiptfile">data/receipts/…</code> and hash-chained
+</footer>
+
+<script>
+const SEATS = [
+  ["chief","chief of staff"],["tape","the tape"],
+  ["quant","quant desk"],["macro","macro desk"],["credit","credit desk"],["digital","digital desk"],
+  ["risk","the gate"],["pm","portfolio mgr"],["exec","execution"],["clerk","the clerk"],
+  ["comms","comms"],["scribe","the scribe"],
+];
+
+const $ = (id) => document.getElementById(id);
+const money = (n) => (n < 0 ? "-$" : "$") + Math.abs(Math.round(n)).toLocaleString("en-US");
+const px = (n, d = 2) => Number(n).toLocaleString("en-US", { minimumFractionDigits: d, maximumFractionDigits: d });
+const signed = (n, d = 2) => (n >= 0 ? "+" : "") + px(n, d);
+const cls = (n) => (n < 0 ? ' class="neg"' : "");
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const clock = (m) => {
+  const t = 9 * 60 + 30 + Math.floor(m || 0);
+  return String(Math.floor(t / 60) % 24).padStart(2, "0") + ":" + String(t % 60).padStart(2, "0");
+};
+
+let lastSeen = 0;
+let models = {};
+let lastState = null;
+
+// The roster arrives on its own clock; when it lands, redraw the seats we have
+// already drawn rather than waiting for the next signal.
+fetch("/roster")
+  .then((r) => r.json())
+  .then((m) => { models = m; if (lastState) renderSeats(lastState); })
+  .catch(() => {});
+
+function renderSeats(state) {
+  const busy = new Set();
+  if (state.tape && state.tape.calls && state.tape.calls.length) busy.add("tape");
+  for (const t of state.tickets.slice(0, 4)) busy.add(t.desk);
+  if (state.queue.length) busy.add("risk");
+  if (state.executions.length) { busy.add("exec"); busy.add("pm"); busy.add("clerk"); }
+  busy.add("chief");
+
+  $("seats").innerHTML = SEATS.map(([seat, title]) => {
+    const m = models[seat];
+    const line = m ? `${esc(m.model)} · ${m.calls} calls` : (seat === "clerk" ? "no model, by design" : "—");
+    return `<div class="seat${busy.has(seat) ? " active" : ""}">
+      <span class="who">${seat}</span>
+      <span class="what">${esc(title)}</span>
+      <span class="model">${line}</span>
+      <span class="chair"></span>
+    </div>`;
+  }).join("");
+}
+
+function render(state) {
+  $("session").textContent = state.sessionId;
+  $("clock").textContent = clock(state.minute);
+  $("equity").textContent = money(state.equity);
+  $("pnl").innerHTML = `<span${cls(state.sessionPnl)}>${signed(state.sessionPnl, 0)}</span>`;
+  $("var").textContent = money(state.var95);
+  $("posture").textContent = state.halted ? "HALTED — " + state.halted : state.posture;
+  $("breadth").textContent = `breadth ${px(state.snapshot.session.breadth, 0)}% · VIX ${px(state.snapshot.session.vix, 1)}`;
+
+  const q = Object.values(state.snapshot.quotes);
+  $("board").innerHTML = q.map((x) => `
+    <tr>
+      <td class="sym">${esc(x.symbol)}</td>
+      <td>${px(x.last)}</td>
+      <td${cls(x.changePct)}>${signed(x.changePct)}%</td>
+      <td>${px(x.bid)}</td>
+      <td>${px(x.ask)}</td>
+      <td>${px(((x.ask - x.bid) / x.last) * 10000, 1)}</td>
+      <td>${Math.round(x.volume).toLocaleString("en-US")}</td>
+    </tr>`).join("");
+
+  $("ticketcount").textContent = `${state.tickets.length} shown`;
+  $("tickets").innerHTML = state.tickets.slice(0, 14).map((t) => {
+    const v = state.verdicts[t.id];
+    const tag = !v ? '<span class="tag">queued</span>'
+      : v.pass ? `<span class="tag fire">cleared ${money(v.allowed)}</span>`
+      : `<span class="tag stop">refused · ${esc(v.refusedBy || "")}</span>`;
+    return `<li>
+      <div>${tag} <span class="sym">${esc(t.desk)}</span> ${esc(t.side)} ${esc(t.symbol)} ${money(t.notional)} <span class="why">conv ${t.conviction} · ${t.horizonMin} min</span></div>
+      <div class="thesis">${esc(t.thesis)}</div>
+    </li>`;
+  }).join("") || "<li class='why'>no desk has written anything yet</li>";
+
+  $("queue").textContent = `${state.queue.length} waiting`;
+  const verdicts = state.tickets.map((t) => state.verdicts[t.id]).filter(Boolean).slice(0, 8);
+  $("verdicts").innerHTML = verdicts.map((v) => `
+    <li>
+      <div><span class="sym">${esc(v.ticketId)}</span> ${v.pass ? `<span class="tag fire">${money(v.allowed)}</span>` : `<span class="tag stop">${esc(v.refusedBy || "refused")}</span>`}</div>
+      <div class="why">${v.reasons.map(esc).join("<br>")}</div>
+      ${v.review ? `<div class="why">risk seat (${esc(v.review.model)}): ${esc(v.review.note)}</div>` : ""}
+    </li>`).join("") || "<li class='why'>nothing has reached the gate</li>";
+
+  let gross = 0, net = 0;
+  for (const m of state.marks) { gross += Math.abs(m.size * m.last); net += m.size * m.last; }
+  $("exposure").textContent = `gross ${money(gross)} · net ${money(net)}`;
+  $("positions").innerHTML = state.marks.map((m) => `
+    <tr>
+      <td class="sym">${esc(m.symbol)}</td>
+      <td>${m.size.toLocaleString("en-US")}</td>
+      <td>${px(m.avgPrice)}</td>
+      <td>${px(m.last)}</td>
+      <td${cls(m.unrealised)}>${signed(m.unrealised, 0)}</td>
+      <td${cls(m.unrealisedPct)}>${signed(m.unrealisedPct)}%</td>
+    </tr>`).join("") || `<tr><td colspan="6" class="why">flat</td></tr>`;
+
+  $("fills").innerHTML = state.executions.slice(0, 10).map((e) => `
+    <li>
+      <div><span class="sym">${esc(e.ticketId)}</span> ${esc(e.side)} ${e.filledSize}/${e.requestedSize} @ ${px(e.avgPrice, 4)}
+        <span class="why">${signed(e.slippageBps, 1)} bps</span></div>
+      <div class="why">${e.fills.map((f) => `L${f.level} ${px(f.price)} × ${f.size}`).join("  ·  ")}</div>
+      ${e.unfilledReason ? `<div class="why">${esc(e.unfilledReason)}</div>` : ""}
+    </li>`).join("") || "<li class='why'>nothing has traded</li>";
+
+  lastState = state;
+  renderSeats(state);
+  lastSeen = Date.now();
+}
+
+const es = new EventSource("/events");
+es.addEventListener("state", (e) => render(JSON.parse(e.data)));
+es.addEventListener("pulse", () => { lastSeen = Date.now(); });
+es.addEventListener("closed", () => { $("pulse").textContent = "the bell"; });
+
+setInterval(() => {
+  const age = Math.round((Date.now() - lastSeen) / 1000);
+  const stale = age > 25;
+  $("dot").className = "dot" + (stale ? " stale" : "");
+  $("pulse").textContent = lastSeen === 0 ? "waiting for the bell" : stale ? `quiet for ${age}s` : "live";
+}, 1000);
+</script>
+</body>
+</html>

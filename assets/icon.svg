@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="outcry: twelve seats, one gate">
+  <!--
+    The mark is the product: twelve blocks, one of them brass.
+    Eleven seats do their own job; the twelfth is the gate every ticket clears.
+    It has to read at 40 px in a list of repositories, so there is nothing else in it.
+  -->
+  <rect width="512" height="512" rx="88" fill="#EDE3CC"/>
+  <rect x="8" y="8" width="496" height="496" rx="80" fill="none" stroke="#2B2118" stroke-width="16"/>
+
+  <g fill="#2B2118">
+    <rect x="104" y="120" width="72" height="72" rx="8"/>
+    <rect x="220" y="120" width="72" height="72" rx="8"/>
+    <rect x="336" y="120" width="72" height="72" rx="8"/>
+
+    <rect x="104" y="220" width="72" height="72" rx="8"/>
+    <rect x="336" y="220" width="72" height="72" rx="8"/>
+
+    <rect x="104" y="320" width="72" height="72" rx="8"/>
+    <rect x="220" y="320" width="72" height="72" rx="8"/>
+    <rect x="336" y="320" width="72" height="72" rx="8"/>
+  </g>
+
+  <!-- the gate -->
+  <rect x="220" y="220" width="72" height="72" rx="8" fill="#C79A3C"/>
+  <rect x="240" y="240" width="32" height="32" rx="4" fill="#2B2118"/>
+</svg>

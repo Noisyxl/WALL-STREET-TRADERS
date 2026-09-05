@@ -1,0 +1,65 @@
+{
+  "version": "outcry-1",
+  "name": "outcry",
+  "measured_at": "2026-09-05",
+  "note": "A trading floor before screens: ledger paper, ink, and one brass fitting. Every value here appears verbatim in src/util/fmt.ts, src/floorview/index.html and assets/*.svg — there is no second palette anywhere in the repository.",
+
+  "colors": {
+    "paper": "#EDE3CC",
+    "panel": "#F5EDD8",
+    "sunk": "#E2D5B8",
+    "line": "#C2AF8E",
+    "wood": "#8A6A44",
+    "ink": "#2B2118",
+    "ink-2": "#4A3B2C",
+    "muted": "#7A6A56",
+    "brass": "#C79A3C",
+    "on-brass": "#241B12",
+    "loss": "#B4453C",
+    "gain": "#3F7A4E"
+  },
+
+  "chroma_rule": {
+    "statement": "Brass is spent on decisions, never on moods.",
+    "brass_is_for": ["a cleared verdict", "the live badge", "a section a seat is acting in", "the gate itself"],
+    "brass_is_never_for": ["a profit", "a rising price", "an emphasis", "a chart series"],
+    "loss_is_for": ["negative P&L text", "a refused verdict", "a reconciliation break"],
+    "loss_is_never_for": ["a fill background", "a warning that is not a loss"],
+    "gain": "declared and almost unused: a winning position is ink on paper with no colour at all. Profit is not green."
+  },
+
+  "typography": {
+    "family": "JetBrains Mono, ui-monospace, SF Mono, Menlo, Consolas, monospace",
+    "note": "One face. This is a terminal product and a ledger; a proportional face would misalign every column it has.",
+    "weights": { "regular": 400, "medium": 500, "ceiling": 500 },
+    "sizes": {
+      "wordmark": 18,
+      "section-label": 11,
+      "body": 12,
+      "data": 12,
+      "note": 11
+    },
+    "caps": "Section labels and the wordmark only. Tickers are data, not emphasis, and stay as they are."
+  },
+
+  "space": { "base": 6, "scale": [6, 10, 12, 14, 18, 24, 32] },
+
+  "shape": {
+    "panel": "1px solid line, no radius",
+    "tag": "1px solid line, no radius, 0 6px",
+    "note": "Zero rounded corners, zero shadows, zero gradients. Depth is surface tone plus one hairline, the way a printed form has depth."
+  },
+
+  "surfaces": {
+    "page": "paper, with a 4px repeating hairline at 1.4% ink — ledger ruling, not texture",
+    "panel": "panel on paper",
+    "header-strip": "sunk, for a section label",
+    "seat": "sunk when idle, panel with a brass border when the seat is acting"
+  },
+
+  "polarity_flip": {
+    "allowed_once_per_surface": true,
+    "where": ["a cleared verdict tag", "the gate box in the banner", "the live badge"],
+    "note": "Brass ground with on-brass text. Everything else stays ink on paper."
+  }
+}

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 460" width="1600" height="460" role="img" aria-label="outcry: a trading floor you run on your own machine">
+  <defs>
+    <pattern id="rule" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1" height="4" fill="#EDE3CC"/>
+      <rect width="1" height="1" fill="#2B2118" opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <rect width="1600" height="460" fill="#EDE3CC"/>
+  <rect width="1600" height="460" fill="url(#rule)"/>
+
+  <!-- the floor, drawn: four desks feeding one gate feeding execution -->
+  <g stroke="#C2AF8E" stroke-width="2" fill="none">
+    <rect x="64" y="64" width="1472" height="332" rx="6"/>
+  </g>
+
+  <text x="104" y="132" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="76" font-weight="500" letter-spacing="12" fill="#2B2118">outcry</text>
+  <text x="110" y="180" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="25" letter-spacing="1" fill="#4A3B2C">a trading floor you run on your own machine</text>
+  <text x="110" y="216" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="21" letter-spacing="1" fill="#7A6A56">twelve LLM seats · four desks in parallel · one risk gate every ticket clears</text>
+  <text x="110" y="248" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="21" letter-spacing="1" fill="#7A6A56">orders worked level by level · a hash-chained receipt for everything</text>
+
+  <!-- the pipeline, as boxes, because the arrangement is the product -->
+  <g font-family="'JetBrains Mono', ui-monospace, monospace" font-size="17" letter-spacing="1">
+    <g fill="#EDE3CC" stroke="#2B2118" stroke-width="2">
+      <rect x="110" y="292" width="118" height="46" rx="4"/>
+      <rect x="252" y="292" width="118" height="46" rx="4"/>
+      <rect x="394" y="292" width="118" height="46" rx="4"/>
+      <rect x="536" y="292" width="118" height="46" rx="4"/>
+    </g>
+    <g fill="#2B2118" text-anchor="middle">
+      <text x="169" y="321">quant</text>
+      <text x="311" y="321">macro</text>
+      <text x="453" y="321">credit</text>
+      <text x="595" y="321">digital</text>
+    </g>
+
+    <path d="M 678 315 L 726 315" stroke="#7A6A56" stroke-width="2"/>
+    <path d="M 718 309 L 728 315 L 718 321 Z" fill="#7A6A56"/>
+
+    <rect x="736" y="288" width="176" height="54" rx="4" fill="#C79A3C"/>
+    <text x="824" y="321" fill="#241B12" text-anchor="middle" font-weight="500">THE GATE</text>
+
+    <path d="M 926 315 L 974 315" stroke="#7A6A56" stroke-width="2"/>
+    <path d="M 966 309 L 976 315 L 966 321 Z" fill="#7A6A56"/>
+
+    <g fill="#EDE3CC" stroke="#2B2118" stroke-width="2">
+      <rect x="986" y="292" width="104" height="46" rx="4"/>
+      <rect x="1114" y="292" width="118" height="46" rx="4"/>
+      <rect x="1256" y="292" width="112" height="46" rx="4"/>
+    </g>
+    <g fill="#2B2118" text-anchor="middle">
+      <text x="1038" y="321">pm</text>
+      <text x="1173" y="321">exec</text>
+      <text x="1312" y="321">clerk</text>
+    </g>
+  </g>
+
+  <text x="1496" y="126" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" letter-spacing="1" fill="#7A6A56" text-anchor="end">paper by default · no live adapter ships</text>
+  <text x="1496" y="154" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" letter-spacing="1" fill="#7A6A56" text-anchor="end">MIT · one runtime dependency · Node 20</text>
+  <text x="1496" y="182" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="18" letter-spacing="1" fill="#7A6A56" text-anchor="end">74 tests, none of them touch a network</text>
+</svg>

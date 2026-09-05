@@ -1,0 +1,12 @@
+[1G[0K
+  [38;2;199;154;60mbuy NVDA $40,000[0m  [38;2;122;106;86magainst $250,000 equity[0m
+
+  [38;2;122;106;86mday stop ok · session +0.00% of 3%[0m
+  [38;2;122;106;86mticket trimmed · asked $40,000, cap 4% of equity is $10,000[0m
+  [38;2;122;106;86mname ok · NVDA would be $10,000 of $30,000[0m
+  [38;2;122;106;86mgross ok · $190,000 of $225,000[0m
+  [38;2;122;106;86mnet ok · $10,000 of $150,000[0m
+
+  [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m  $10,000
+  [38;2;122;106;86mthe model review runs on top of this and can only tighten it — src/risk/gate.ts[0m
+[1G[0K\[1G[0K

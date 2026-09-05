@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="outcry">
+  <rect width="1280" height="320" fill="#EDE3CC"/>
+
+  <g transform="translate(56 48) scale(0.4297)">
+    <rect width="512" height="512" rx="88" fill="#EDE3CC"/>
+    <rect x="8" y="8" width="496" height="496" rx="80" fill="none" stroke="#2B2118" stroke-width="16"/>
+    <g fill="#2B2118">
+      <rect x="104" y="120" width="72" height="72" rx="8"/>
+      <rect x="220" y="120" width="72" height="72" rx="8"/>
+      <rect x="336" y="120" width="72" height="72" rx="8"/>
+      <rect x="104" y="220" width="72" height="72" rx="8"/>
+      <rect x="336" y="220" width="72" height="72" rx="8"/>
+      <rect x="104" y="320" width="72" height="72" rx="8"/>
+      <rect x="220" y="320" width="72" height="72" rx="8"/>
+      <rect x="336" y="320" width="72" height="72" rx="8"/>
+    </g>
+    <rect x="220" y="220" width="72" height="72" rx="8" fill="#C79A3C"/>
+    <rect x="240" y="240" width="32" height="32" rx="4" fill="#2B2118"/>
+  </g>
+
+  <text x="320" y="182" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="104" font-weight="500" letter-spacing="14" fill="#2B2118">outcry</text>
+  <text x="326" y="238" font-family="'JetBrains Mono', ui-monospace, monospace" font-size="30" letter-spacing="4" fill="#7A6A56">twelve seats · four desks · one gate</text>
+</svg>

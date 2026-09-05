@@ -1,0 +1,91 @@
+[1G[0K
+  [38;2;199;154;60moutcry[0m  [38;2;122;106;86mtwelve seats · four desks · one gate · paper by default[0m
+
+[38;2;122;106;86m  ┌─────────────────────────────────────────────────────────────┐[0m
+[38;2;122;106;86m  │  ▚ ▚ ▚ ▚    tape   quant   macro   credit   digital         │[0m
+[38;2;122;106;86m  │  ▚ ▚ ▚ ▚         ↓      ↓       ↓        ↓        ↓         │[0m
+[38;2;122;106;86m  │  ▚ ▚ ▚ ▚              → → →  the gate  → → →                │[0m
+[38;2;122;106;86m  │  ▚ ▚ ▚ ▚                        ↓                           │[0m
+[38;2;122;106;86m  │  ▚ ▚ ▚ ▚              pm  →  exec  →  clerk                 │[0m
+[38;2;122;106;86m  └─────────────────────────────────────────────────────────────┘[0m
+
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mfloor  [0m [48;2;199;154;60m[38;2;43;33;24m OPEN [0m 2026-09-05-1be0 · synthetic feed · NVDA TSM MU AVGO META · $250,000
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mchief  [0m neutral: VIX 14.2, breadth 50%, 0 names open
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0001-MU buy MU $5,000 · MU is 1.05% behind NVDA on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0001-MU $5,000 · inside every limit, horizon fits the session, 1 other tickets this way
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0001-MU 38 shares · 38 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0001-MU 38/38 @ 128.4400 · 128.44x5 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mdigital[0m D-0002-NVDA buy NVDA $5,000 · NVDA is up 0.80% on the session and holding the offer; staying with the flow
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m D-0002-NVDA $3,000 · 3 tickets the same way this session; correlated, sized down
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m D-0002-NVDA 16 shares · 16 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m D-0002-NVDA 16/16 @ 186.3400 · 186.34 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0003-MU sell MU $5,000 · breadth 40% with 10Y at 4.16; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0003-MU $2,500 · horizon 90 min runs past the close with 45 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0003-MU 19 shares · 19 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0003-MU 19/19 @ 128.5000 · 128.50x4 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0004-AVGO buy AVGO $5,000 · AVGO is 1.01% behind NVDA on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0004-AVGO $2,500 · horizon 45 min runs past the close with 40 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0004-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0004-AVGO 10/10 @ 247.7400 · 247.74x2 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mchief  [0m neutral: VIX 14.4, breadth 20%, 3 names open, late in the session — new horizons should fit inside it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0005-AVGO sell AVGO $4,999 · breadth 20% with 10Y at 4.16; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0005-AVGO $2,500 · horizon 90 min runs past the close with 30 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0005-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0005-AVGO 10/10 @ 245.3200 · 245.32x4 · +-0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0006-TSM buy TSM $4,999 · TSM is 1.29% behind NVDA on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0006-TSM $2,499 · horizon 45 min runs past the close with 25 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0006-TSM 11 shares · 11 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0006-TSM 11/11 @ 209.8200 · 209.82x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0007-TSM sell TSM $4,999 · breadth 40% with 10Y at 4.15; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0007-TSM $2,499 · horizon 90 min runs past the close with 25 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0007-TSM 11 shares · 11 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0007-TSM 11/11 @ 209.7800 · 209.78x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0008-MU sell MU $4,998 · breadth 0% with 10Y at 4.16; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0008-MU $2,499 · horizon 90 min runs past the close with 20 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0008-MU 19 shares · 19 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0008-MU 19/19 @ 126.8800 · 126.88x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0009-MU buy MU $4,998 · MU is 1.41% behind META on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0009-MU $2,499 · horizon 45 min runs past the close with 15 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0009-MU 19 shares · 19 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0009-MU 19/19 @ 127.1400 · 127.14x4 · +-0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0010-MU sell MU $4,998 · breadth 20% with 10Y at 4.15; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0010-MU $2,499 · horizon 90 min runs past the close with 15 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0010-MU 19 shares · 19 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0010-MU 19/19 @ 127.1200 · 127.12x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0011-AVGO buy AVGO $4,999 · AVGO is 1.86% behind META on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0011-AVGO $2,499 · horizon 45 min runs past the close with 10 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0011-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0011-AVGO 10/10 @ 245.6900 · 245.69x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0012-AVGO sell AVGO $4,999 · breadth 40% with 10Y at 4.14; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0012-AVGO $2,499 · horizon 90 min runs past the close with 10 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0012-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0012-AVGO 10/10 @ 245.6500 · 245.65x4 · +-0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mdigital[0m D-0013-META buy META $4,999 · META is up 0.95% on the session and holding the offer; staying with the flow
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m D-0013-META $2,499 · horizon 30 min runs past the close with 10 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m D-0013-META 3 shares · 3 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m D-0013-META 3/3 @ 715.2000 · 715.20x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0014-AVGO buy AVGO $4,998 · AVGO is 1.40% behind NVDA on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0014-AVGO $2,499 · horizon 45 min runs past the close with 5 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0014-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0014-AVGO 10/10 @ 245.0100 · 245.01x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0015-AVGO sell AVGO $4,998 · breadth 40% with 10Y at 4.13; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0015-AVGO $2,499 · horizon 90 min runs past the close with 5 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0015-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0015-AVGO 10/10 @ 244.9700 · 244.97x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mchief  [0m neutral: VIX 14.4, breadth 40%, 2 names open, late in the session — new horizons should fit inside it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mquant  [0m Q-0016-AVGO buy AVGO $4,999 · AVGO is 2.04% behind NVDA on the session with no spread widening; fading the dispersion
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m Q-0016-AVGO $2,499 · horizon 45 min runs past the close with 0 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m Q-0016-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m Q-0016-AVGO 10/10 @ 244.4300 · 244.43x4 · +-0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcredit [0m C-0017-AVGO sell AVGO $4,999 · breadth 40% with 10Y at 4.13; the weakest name leads on a funding tape
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mrisk   [0m [48;2;199;154;60m[38;2;43;33;24m CLEARED [0m C-0017-AVGO $2,499 · horizon 90 min runs past the close with 0 min left; half size
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mpm     [0m C-0017-AVGO 10 shares · 10 shares, the full allowance; depth carries it
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mexec   [0m C-0017-AVGO 10/10 @ 244.4100 · 244.41x3 · +0.0 bps · working saved 0.0 bps
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mfloor  [0m [48;2;199;154;60m[38;2;43;33;24m CLOSE [0m $250,000 → $249,925 · [38;2;180;69;60m-0.03%[0m
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcomms  [0m 60 minutes. Equity $250,000 to $249,925, -$75.
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcomms  [0m 17 tickets written, 17 cleared, 0 refused.
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcomms  [0m 55 fills at 0.0 bps average slippage; working the book saved 0.0 bps against sweeping it.
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcomms  [0m Still open: NVDA +16, META +3.
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mcomms  [0m Receipt chain head 0a12a48f357f39b0.
+[38;2;122;106;86m19:48:55[0m [38;2;199;154;60mfloor  [0m receipts 154 lines · head [38;2;199;154;60mdf5271ebc77b3122[0m · data/receipts/2026-09-05-1be0.jsonl
+[1G[0K\[1G[0K
