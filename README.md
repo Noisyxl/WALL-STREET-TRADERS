@@ -46,7 +46,7 @@ Node 20 or newer. One runtime dependency. Nothing below needs an API key.
 
 ```sh
 # 1. a checkout you can read and edit
-git clone https://github.com/phosphenq/outcry && cd outcry
+git clone https://github.com/Noisyxl/WALL-STREET-TRADERS && cd WALL-STREET-TRADERS
 npm install
 cp .env.example .env
 npx outcry doctor
@@ -54,7 +54,7 @@ npx outcry doctor
 
 ```sh
 # 2. straight from GitHub, no clone
-npm install -g github:phosphenq/outcry
+npm install -g github:Noisyxl/WALL-STREET-TRADERS
 outcry doctor
 ```
 
