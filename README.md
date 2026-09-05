@@ -19,6 +19,9 @@
   <img alt="license" src="https://img.shields.io/badge/license-MIT-C79A3C?style=flat-square&labelColor=2B2118">
 </p>
 
+<p align="center">
+  <b><a href="https://x.com/noisyb0y1/status/2092180376084963410">▶ Watch the floor run — thread on X</a></b>
+</p>
 
 <p align="center">
   <a href="https://x.com/noisyb0y1/status/2092180376084963410">
