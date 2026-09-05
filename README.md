@@ -1,8 +1,5 @@
 <p align="center">
-  <img src="./assets/icon.png" alt="outcry" width="112">
-</p>
-<p align="center">
-  <img src="./assets/banner.png" alt="outcry: a trading floor you run on your own machine" width="100%">
+  <img src="./assets/floor.png" alt="the floor: tape, quant, macro, credit, digital and pm desks, the risk gate, execution, and the order book" width="100%">
 </p>
 
 <p align="center">
@@ -16,7 +13,9 @@
 </p>
 
 <p align="center">
-  <b>$GOWS</b> · Grok of Wall Street · <code>REPLACE_WITH_CONTRACT_ADDRESS</code>
+  <sub><b>every ticket walks the floor: desk → risk gate → execution → print.</b><br>
+  Each desk drawn above is a seat this repository actually runs. The working version is a terminal
+  and a local page, and both are further down.</sub>
 </p>
 
 Almost every "AI trading bot" is one prompt that answers buy or sell. This is an **organisation**: four desks
