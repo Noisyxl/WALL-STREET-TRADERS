@@ -1,3 +1,10 @@
+<h1 align="center">WALL STREET TRADERS</h1>
+
+<p align="center">
+  <b>12 TRADERS · 4 DESKS · 1 RISK GATE · $0 IN SALARIES</b><br>
+  A bank pays about <b>$2M a year</b> for this org chart. This one runs on your laptop.
+</p>
+
 <p align="center">
   <img src="./assets/floor.png" alt="the floor: tape, quant, macro, credit, digital and pm desks, the risk gate, execution, and the order book" width="100%">
 </p>
